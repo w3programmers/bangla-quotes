@@ -25,15 +25,8 @@ function bq_get_quotes() {
         ];
 
 	// And then randomly choose a line.
-	return wptexturize( $quotes[ mt_rand( 0, count( $quotes ) - 1 ) ] );
-}
-
-// This just echoes the chosen line, we'll position it later.
-function bangla_quotes() {
-	$chosen = bq_get_quotes();
-	
-	printf(	$chosen );
+	printf(wptexturize( $quotes[ mt_rand( 0, count( $quotes ) - 1 ) ] ));
 }
 
 // Now we set that function up to execute when the wp_head built in action hook is called.
-add_action( 'wp_head', 'bangla_quotes' );
+add_action( 'wp_head', 'bq_get_quotes' );

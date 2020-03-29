@@ -10,7 +10,7 @@
  */
 
 function bq_get_quotes() {
-	/** These are the lyrics to Hello Dolly */
+	/** These are quotes from A P J Abul Kalam */
     $quotes=[
         "“স্বপ্ন বাস্তবায়ন না হওয়া পর্যন্ত তোমাকে স্বপ্ন দেখে যেতে হবে” – Abdul Kalam",
         "“স্বপ্ন সেটা নয় যেটা তুমি ঘুমিয়ে ঘুমিয়ে দেখো | স্বপ্ন হলো সেটাই যা পূরণের অদম্য ইচ্ছা তোমায় ঘুমাতে দেবে না” – Abdul Kalam",
@@ -35,5 +35,5 @@ function bangla_quotes() {
 	printf(	$chosen );
 }
 
-// Now we set that function up to execute when the admin_notices action is called.
+// Now we set that function up to execute when the wp_head built in action hook is called.
 add_action( 'wp_head', 'bangla_quotes' );

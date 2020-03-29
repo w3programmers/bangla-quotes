@@ -1,11 +1,11 @@
 <?php
  /*
  Plugin Name: Bangla Quotes
- Plugin URI: http://example.com/wordpress-plugins/bangla-quotes
+ Plugin URI: https://github.com/w3programmers/bangla-quotes
  Description: A Collections of Bangla Quotes From A P J Abul Kalam
  Version: 1.0
  Author: Masud Alam
- Author URI: http://w3programmers.com
+ Author URI: http://w3programmers.com/bangla
  License: GPLv2
  */
 
@@ -36,4 +36,4 @@ function bangla_quotes() {
 }
 
 // Now we set that function up to execute when the admin_notices action is called.
-add_action( 'display_bangla_quotes', 'bangla_quotes' );
+add_action( 'wp_head', 'bangla_quotes' );
